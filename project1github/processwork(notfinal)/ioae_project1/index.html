@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOaE - Project 1</title>
+    <link rel="stylesheet" href="css/design.css">
+</head>
+<!--///////////////////HEADER-->
+
+<body>
+    <div class="featured">
+        <div class="featuredText">
+            <h1>Project 1 - Connected Objects</h1>
+            <h2>Version 1 of the Gumball Machine; using the Feather to connect to the Servo Motor</h2>
+            <h3>Github Folder URL: </h3>
+        </div>
+    </div>
+    
+    <!--    //////////////////SECTION 1-->
+    <div class="col3 md3">
+        <h3>Initial Concept</h3>
+        <p>The concept of a gumball machine has always been one of wonder, growing up, it's a fun cheap way for kids to get some candy for themselves by exchanging change for sweets. I wanted to bring that sense of whimsy into this project, but elevate it further through using connected objects to sense and react to its surroundings.</p>
+        
+        <p>Combining a Servo 180º motor and the Feather, I wanted to simulate the experience of the machine by having it operate like a gumboil machine to deposit snacks or candy into something, in this case let's say a bowl. When the bowl is present, a signal is sent to the feather to start the Servo Motor which will then rotate, opening the hatch and letting a snack or candy fall into the bowl, then stop after one turn. The appearance of the bowl to hold food is meant to connect hunger between people and the objects in the environment.</p>
+        
+        <picture>
+                <source media="(max-width: 600px)" srcset="img/sketch8.png">
+                <source media="(max-width: 1024px)" srcset="img/sketch8.png">
+                <img src="img/sketch8.png" style="max-width: 500px; display:block; margin-left:35%;" alt="full page of concept art" class="rsp">
+            </picture>
+        <p>Full Concept Art Page, featuring sketches of the object, the way the motor will work and the process on how the data is being sent and received.</p>
+    </div>
+    
+    
+
+    <div class="grid1">
+        <h4>Design Iterations of the Object</h4>
+<div class="clearfix">
+        <div class="img-container">
+            <img src="img/sketch1.png" style="width:50%">
+        </div>
+        <div class="img-container">
+            <img src="img/sketch6.png" style="width:50%">
+        </div>
+        <div class="img-container">
+            <img src="img/sketch4.png" style="width:100%">
+        </div>
+    </div>
+         <div class="col3 md3">
+            <p>Starting with the first version of the machine, I sketched out a box on stilts which serve to keep it propped up as well as be open enough to put something underneath it. When something is propped underneath the object (such as a bowl) the food gets dispensed.</p> 
+            <p>For a version 2 I wanted to explore using a weight sensor to detect the weight of the bowl when it comes into contact with where the sensor is stored. Creating a thin but sturdy platform to house the objects, when the weight of the bowl is detected it sends a signal to the Feather to dispense food. Due to some limitations of supplies this wasn't explored in the physical prototype for Project 1.</p>
+             </div>
+    </div>
+
+    <div class="grid padded">
+        <div class="twothird col">
+
+            <picture>
+                <source media="(max-width: 600px)" srcset="img/sketch7.png">
+                <source media="(max-width: 1024px)" srcset="img/sketch7.png">
+                <img src="img/sketch7.png" style="max-width:250px" alt="Bottom of Container" class="rsp">
+            </picture>
+
+        </div>
+
+        <div class="col3 md3">
+            <h4>Bottom View of the Object (How the Feather Reacts to Received Input)</h4>
+            <p>When data is received, the Servo Motor will do one rotation of the wooden plate placed where the hole of the box is, temporarily letting food out. On the box, the motor will be located on another side by the edge so that when it rotates the wooden plate moves on the same plane as it's placed on.</p>
+        </div>
+    </div>
+
+    <div class="grid padded">
+        <div class="twothird col">
+            <picture>
+                <source media="(max-width: 600px)" srcset="img/sketch3.png">
+                <source media="(max-width: 1024px)" srcset="img/sketch3.png">
+                <img src="img/sketch3.png" style="max-width:450px" class="rsp">
+            </picture>
+
+        </div>
+
+        <div class="col3 md3">
+            <h4>Project 1's Method of Sending Data to the Feather</h4>
+            <p>Using the capabilties of the Dashboard</p>
+        </div>
+    </div>
+    <!--    //////////////////SECTION 2-->
+    <div class="col3 md3">
+        <h3>The User Experience</h3>
+        <p>For Project 1, when the user interacts with the computer to put an input into the system (pressing a button on a webpage in this case), it sends data to the Feather that gets the Servo Motor to respond by doing an action. This data is received and stored on Adafruit.io as well.</p>
+        
+        <p>When initially planning this project, I had aimed to use a sensor (ideally a weight sensor) to detect weight on a certain area, send that data through the feather to Adafruit.io and Firebird, and if the conditions are met, sends data back through to the Feather and that activates the Servo Motor as a response. This concept will be explored further at a later point due to the subtle nature that comes with the user interaction. For now, it requires the user to press something to get the connected object to perform it's intended function.</p>
+    </div>
+
+    <div class="clearfix">
+        
+        <div class="img-container">
+            <picture>
+                <source media="(max-width: 600px)" srcset="img/sketch5.png">
+                <source media="(max-width: 1024px)" srcset="img/sketch5.png">
+                <img src="img/sketch5.png" style="max-width:650px;">
+            </picture>
+
+        </div>
+    </div>
+
+    <div class="grid padded">
+        <p>In terms of the overall user experience, the goal of the object is to connect hunger with giving food, using the bowl or some form of thing that can hold food as a sign that the user is hungry and would like a refill of food into said object. Using the Table Exercise from Week 1, here's the thought process behind the interaction.</p>
+        <div class="img-container">
+            <picture>
+                <source media="(max-width: 600px)" srcset="img/sketch5.png">
+                <source media="(max-width: 1024px)" srcset="img/sketch5.png">
+                <img src="img/sketch5.png" style="max-width:650px;">
+            </picture>
+
+        </div>
+    </div>
+   
+
+    <!--    /////////-->
+    <!--    //////////////////SECTION 2-->
+    <div class="col3 md3">
+        <h3>System Map
+        </h3>
+        <h3>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
+
+    </div>
+    <img src="img/landscape.jpg" style="width:100%">
+    <div class="col3 md3">
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+    </div>
+
+    <div class="prototype" style="float:left; width:33.33%;">
+        <h3>Prototype</h3>
+        <p>Here are the images from the physical prototype made for Project 1. Here are the materials used in making the physical prototype:</p>
+        <ul>
+            <li>Cardboard Box</li>
+            <li>Construction Paper</li>
+            <li>Clear Tape + Cloth Tape</li>
+            <li>Laser Cut Wooden Plate (recycled from a previous project)</li>
+            <li>Servo 180º Motor</li>
+            <li>Plastic Piece to hold Wooden Plate (provided with the Servo)</li>
+            <li>Adafruit Feather ESP</li>
+            <li>Breadboard</li>
+            <li>USB Wire (to connect Feather to Laptop)</li>
+        </ul>
+        
+    </div>
+    
+    <div class="column" style="padding-top:50px;">
+<div class="col5 md5">
+        <div class="img-container">
+            <img src="img/IMG_1118.JPG" style="width:50%">
+            
+        </div>
+       
+    </div>
+        <div class="col5 md5">
+            <div class="img-container">
+        <img src="img/IMG_1120.JPG" style="width:50%">
+            </div>
+        </div>
+         <div class="col3 md3">
+            <p>Due to limitations on items, the final box doesn't have the means to be propped up but this is the final version of the box looking at the bottom of said box. The circuit was simplified since the only function that's happening is related to the Servo Motor.</p>
+             </div>
+    </div>
+
+
+    
+</body>
+
+</html>
